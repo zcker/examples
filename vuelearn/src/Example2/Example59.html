@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue</title>
+    <!-- 通过cdn方式引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <child-component
+        id="1"
+        title="hello syl"
+        content="you are welcom"
+    ></child-component>
+</div>
+<script>
+    Vue.component("child-component", {
+        props: {
+            id: Number,
+            title: String,
+            content: String
+        },
+        template: `
+            <div><p>id:{{ id }}</p>
+            <p>title:{{ title }}</p>
+            <p>content:{{ content }}</p></div>`
+    })
+    var app = new Vue({
+        el: "#app"
+    })
+</script>
+</body>
+</html>

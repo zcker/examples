@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue</title>
+    <!-- 通过cdn方式引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<!-- 指令 参数-->
+<div id="app">
+    <a v-bind:href="url">实验楼</a>
+    <a :href="url">实验楼</a>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            url: "http://shiyanlou.com",
+        },
+    });
+</script>
+</body>
+</html>

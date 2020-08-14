@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+    <style>
+        #app {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+        /* 自定义初始化css */
+        .bounce-enter-active,
+        .bounce-appear-active-class {
+            animation: bounce-in 0.5s;
+        }
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <!-- 自定义初始化渲染过渡和动画 -->
+    <transition
+        appear
+        appear-class="bounce-appear-class"
+        appear-to-class="bounce-appear-to-class"
+        appear-active-class="bounce-appear-active-class"
+    >
+        <p>可以通过 appear 特性设置节点在初始渲染的过渡</p>
+    </transition>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                show: true,
+            };
+        },
+    });
+</script>
+</body>
+</html>

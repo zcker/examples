@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue-test</title>
+    <!-- 引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>我名字正着写：{{ name }}</p>
+    <!-- reverseName 计算属性  可以像绑定普通属性一样在模板中绑定计算属性-->
+    <p>计算出我名字倒着写：{{ reverseName }}</p>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            name: "实验楼",
+        },
+        computed: {
+            //reverseName 是一个计算属性
+            reverseName: function () {
+                return this.name.split("").reverse().join("");
+            },
+        },
+    });
+</script>
+</body>
+</html>

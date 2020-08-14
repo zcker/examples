@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue-test</title>
+    <!-- 引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- joint  为自定义的过滤器-->
+    <p>不要￥899，只要{{ price|joint }}</p>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            //后台价格数据
+            price: 199,
+        },
+        // filters 过滤器选项
+        filters: {
+            //joint 定义一个字符串转大写的过滤器
+            joint: function (price) {
+                return "￥" + price;
+            },
+        },
+    });
+</script>
+</body>
+</html>

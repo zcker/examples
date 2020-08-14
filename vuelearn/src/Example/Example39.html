@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>syl-vue-test</title>
+  <!-- 引入 vue.js -->
+  <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <button @click.left="alert('你按了鼠标左击键')">按钮</button>
+  <button @click.middle="alert('你按了鼠标滚轮')">按钮</button>
+  <button @click.right="alert('你按了鼠标右击键')">按钮</button>
+</div>
+<script>
+  var app = new Vue({
+    el: "#app",
+  });
+</script>
+</body>
+</html>

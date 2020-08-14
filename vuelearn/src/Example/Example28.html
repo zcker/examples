@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>syl-vue-test</title>
+  <!-- 引入 vue.js -->
+  <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <!-- :style 绑定样式 -->
+  <span v-for="number in 10" :style="styleObject">{{number}}</span>
+</div>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      //指定分页样式
+      styleObject: {
+        fontSize: "14px",
+        color: "#fff",
+        background: "green",
+        padding: "5px 10px",
+        border: "1px solid #fff",
+      },
+    },
+  });
+</script>
+</body>
+</html>

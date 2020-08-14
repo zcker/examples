@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue-test</title>
+    <!-- 引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>firstName:{{ firstName }}</p>
+    <p>lastName:{{ lastName }}</p>
+    <p>全名是:{{ fullName }}</p>
+    <button v-on:click="changeName">改姓</button>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            firstName: "王",
+            lastName: "花花",
+        },
+        methods: {
+            //changeName 定义一个方法改变 计算属性 fullName 的值
+            changeName: function () {
+                //修改计算属性 fullName 等于李花花
+                this.fullName = "李花花";
+                //上面一句等于触发了 fullName 属性的 setter
+            },
+        },
+        computed: {
+            fullName: {
+                //getter
+                get: function () {
+                    return this.firstName + this.lastName;
+                },
+                //setter  直接改变计算属性 fullName的值就可以触发setter this.fullName='XX'
+                set: function (newName) {
+                    var name = newName;
+                    this.firstName = name.slice(0, 1); //取新值的第一个字符
+                    this.lastName = name.slice(1); //从新值的第二个字符开始取值
+                },
+            },
+        },
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <input
+        type="checkbox"
+        v-model="toggle"
+        true-value="yes"
+        false-value="no"
+    />
+    <p>toggle:{{toggle}}</p>
+</div>
+<script>
+    //通过true-value="yes" false-value="no"属性控制，选中时toggle值为yes,未选中时为no
+    var vue = new Vue({
+        el: "#app",
+        data() {
+            return {
+                toggle: "",
+            };
+        },
+    });
+</script>
+</body>
+</html>

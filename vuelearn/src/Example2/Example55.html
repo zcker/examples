@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <syl></syl>
+    <syl></syl>
+    <syl></syl>
+</div>
+<script>
+    //Vue.component(组件名字,template:{元素标签})
+    Vue.component("syl", {
+        template: "<h1>实验楼全局组件</h1>",
+    });
+    var app = new Vue({
+        el: "#app",
+    });
+</script>
+</body>
+</html>

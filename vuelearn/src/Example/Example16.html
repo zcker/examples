@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>syl-vue-test</title>
+  <!-- 引入 vue.js -->
+  <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+  <style>
+    .active {
+      color: pink;
+      font-size: 22px;
+    }
+    .red-bg {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <!-- 数组语法绑定 class -->
+  <span v-bind:class="[activeClass,bgColorClass]">syl</span>
+  <!-- 渲染后 <span class="active red-bg">syl</span> -->
+</div>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      activeClass: "active",
+      bgColorClass: "red-bg",
+    },
+  });
+</script>
+</body>
+</html>

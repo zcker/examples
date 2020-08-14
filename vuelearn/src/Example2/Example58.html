@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <title-component post-title="syl1"></title-component>
+    <title-component post-title="syl2"></title-component>
+    <title-component post-title="syl3"></title-component>
+</div>
+<script>
+    //注册一个 title组件,通过传入不同的title值,渲染不同的东西
+    //组件上 传递的 props 属性名为 kebab-case（短横线分隔命名)的要转换为驼峰命名
+    Vue.component("title-component", {
+        props: ["postTitle"], //post-title 转换为驼峰命名
+        template: "<p>{{postTitle}}</p>",
+    });
+    var app = new Vue({
+        el: "#app",
+    });
+</script>
+</body>
+</html>

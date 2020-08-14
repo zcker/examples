@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue-test</title>
+    <!-- 引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>firstName:{{ firstName }}</p>
+    <p>lastName:{{ lastName }}</p>
+    <p>全名是:{{ fullName }}</p>
+    <button v-on:click="changeName">改姓</button>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            firstName: "王",
+            lastName: "花花",
+            fullName: "王花花",
+        },
+        methods: {
+            //changeName 定义一个方法改变  fullName 的值
+            changeName: function () {
+                this.fullName = "李花花";
+            },
+        },
+        watch: {
+            //fullName 侦听属性，监听fullName 值的改变
+            fullName: function (val) {
+                var name = val;
+                this.firstName = name.slice(0, 1);
+                this.lastName = name.slice(1);
+            },
+        },
+    });
+</script>
+</body>
+</html>

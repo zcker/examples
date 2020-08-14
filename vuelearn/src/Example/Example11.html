@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue-test</title>
+    <!-- 引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- toUpperCase   getString  为自定义的过滤器-->
+    <p>小写转换大写：过滤前：{{ msg }} 过滤后： {{ msg|toUpperCase }}</p>
+    <p>去除数字：过滤前：{{ msg2 }} 过滤后： {{ msg2|getString }}</p>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            msg: "hello",
+            msg2: "1s2y3l",
+        },
+        // filters 过滤器选项
+        filters: {
+            //toUpperCase 定义一个字符串转大写的过滤器
+            toUpperCase: function (val) {
+                return val.toUpperCase();
+            },
+            //getString 定义一个获取去除数字的过滤器
+            getString: function (val) {
+                let newVal = "";
+                val.split("").map(function (item) {
+                    if (9 >= item && item >= 0) {
+                        return;
+                    } else {
+                        return (newVal += item);
+                    }
+                });
+                return newVal;
+            },
+        },
+    });
+</script>
+</body>
+</html>

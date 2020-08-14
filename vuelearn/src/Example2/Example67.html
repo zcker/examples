@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue</title>
+    <!-- 通过cdn方式引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+    <style>
+        #app {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .bounce-enter-active {
+            animation: bounce-in 0.5s;
+        }
+
+        .bounce-leave-active {
+            animation: bounce-in 0.5s reverse;
+        }
+
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="show=!show">
+        动画队列
+    </button>
+    <transition name="bounce" :duration="2000">
+        <p v-if="show">hello syl</p>
+    </transition>
+    <transition name="bounce" :duration="1500">
+        <p v-if="show">hello syl</p>
+    </transition>
+    <transition name="bounce" :duration="1000">
+        <p v-if="show">hello syl</p>
+    </transition>
+    <transition name="bounce" :duration="500">
+        <p v-if="show">hello syl</p>
+    </transition>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                show: true
+            }
+        },
+    });
+</script>
+</body>
+</html>

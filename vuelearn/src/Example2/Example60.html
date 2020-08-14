@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>syl-vue</title>
+    <!-- 通过cdn方式引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+<child-component @send-msg="getMsg"></child-component>
+</div>
+<script>
+    Vue.component("child-component",{
+        template:`
+        <button @click="$emit('send-msg','子组件')">Click me</button>
+        `
+    })
+    var app=new Vue({
+        el:"#app",
+        methods:{
+            getMsg:function (msg){
+                alert(msg);
+            }
+        }
+    })
+</script>
+</body>
+</html>

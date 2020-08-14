@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue</title>
+    <!-- 通过cdn方式引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="header">
+    <syl-header></syl-header>
+</div>
+<div id="mid">
+    <syl-mid></syl-mid>
+</div>
+<script>
+    var childComponent = {
+        template: "<h2>header</h2>"
+    };
+    var childComponent2 = {
+        template: "<h2>mid</h2>"
+    }
+    var header = new Vue({
+        el: "#header",
+        components: {
+            "syl-header": childComponent
+        },
+    });
+    var mid = new Vue({
+        el: "#mid",
+        components: {
+            "syl-mid": childComponent2
+        }
+    })
+</script>
+</body>
+</html>

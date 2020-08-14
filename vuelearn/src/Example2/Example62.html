@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <button @click="handleClick">{{name}}</button>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                name: "syl",
+            };
+        },
+        methods: {
+            handleClick: function () {
+                this.name = "syl syl";
+            },
+        },
+        beforeCreate() {
+            alert(
+                "在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用"
+            );
+        },
+        created() {
+            alert(
+                "在实例创建完成后被立即调用,挂载阶段还没开始，$el 属性目前不可见"
+            );
+        },
+        beforeMount() {
+            alert("在挂载开始之前被调用：相关的 render 函数首次被调用");
+        },
+        mounted() {
+            alert("el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子");
+        },
+        beforeUpdate() {
+            alert("数据更新时调用");
+        },
+        updated() {
+            alert("组件 DOM 已经更新");
+        },
+        beforeDestroy() {},
+        destroyed() {},
+    });
+</script>
+</body>
+</html>

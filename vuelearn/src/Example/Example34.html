@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>syl-vue-test</title>
+  <!-- 引入 vue.js -->
+  <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+  <style>
+    /* 居中 */
+    .super,
+    .child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+    .super {
+      width: 300px;
+      height: 300px;
+      background: pink;
+    }
+    .super .child {
+      width: 100px;
+      height: 100px;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="super" v-on:click.stop="handleClick('super')">
+    父
+    <div class="child" v-on:click.stop="handleClick('child')">
+      子
+    </div>
+  </div>
+</div>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {},
+    methods: {
+      //声明事件点击监听 handleClick
+      handleClick: function (name) {
+        alert(`我是${name}`);
+      },
+    },
+  });
+</script>
+</body>
+</html>

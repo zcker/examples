@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>syl-vue-test</title>
+  <!-- 引入 vue.js -->
+  <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <span v-for="number in oddNumber">{{number}}</span>
+</div>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      numberArray: [1, 2, 3, 4, 5, 6, 7, 8],
+    },
+    computed: {
+      //计算 numberArray 中为奇数的 oddNumber 奇数数组
+      oddNumber: function () {
+        return this.numberArray.filter(function (number) {
+          return number % 2 === 1;
+        });
+      },
+    },
+  });
+</script>
+</body>
+</html>

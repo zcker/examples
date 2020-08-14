@@ -1,0 +1,30 @@
+JFDML JFormDesigner: "7.0.2.4.305" Java: "11.0.7" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:29:p, par l {comp url:::p:206:p, comp scrollPane1:::::x}, space ::69:x, comp button1:::p:90:p, space :p:49:p}}"
+			"$verticalGroup": "par l {seq t {space ::32:x, comp url:::p:37:p, par l {seq {space :p:29:p, comp scrollPane1:::p:145:p, space :p:45:p}, seq t {space :::p, comp button1:::p:46:p, space :p:97:p}}}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "info"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "url"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "运行"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 445, 320 )
+		} )
+	}
+}

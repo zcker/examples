@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue</title>
+    <!-- 通过cdn方式引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+    <style>
+        .my-transition-enter,
+        .my-transition-leave-to {
+            /* 定义元素默认状态 例如：opacity:0 */
+            opacity: 0;
+        }
+
+        .my-transition-enter-to,
+        .my-transition-leave {
+            /* 定义元素激活时状态 例如：opacity:1*/
+            opacity: 1;
+        }
+
+        .my-transition-enter-active {
+            /* 默认到激活状态过渡，0.5s 快速进入 */
+
+            transition: opacity 0.5s;
+        }
+
+        .my-transition-leave-active {
+            /* 激活到默认状态过渡  2s  缓出过渡打造 */
+            transition: opacity 2s;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="show=!show">
+        start
+    </button>
+    <transition name="my-transition">
+        <p v-if="show">hello syl</p>
+    </transition>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                show: false
+            }
+        },
+    });
+</script>
+</body>
+</html>

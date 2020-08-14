@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>syl-vue-test</title>
+    <!-- 引入 vue.js -->
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ msg }}</p>
+    <!-- v-on:click 简写为 @click -->
+    <button @click="handleClick('hello syl')">改变msg</button>
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            msg: "hello",
+        },
+        methods: {
+            //改变 msg的值
+            handleClick: function (val) {
+                this.msg = val;
+            },
+        },
+        // watch 监听属性
+        watch: {
+            //监听新旧值  监听属性有两个参数，第一个新值，第二个旧值
+            msg: function (newVal, oldVal) {
+                alert("新值" + newVal + "----" + "旧值" + oldVal);
+            },
+        },
+    });
+</script>
+</body>
+</html>

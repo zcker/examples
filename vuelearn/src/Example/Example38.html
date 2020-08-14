@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>syl-vue</title>
+  <!-- 通过cdn方式引入 vue.js -->
+  <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+<button @click.ctrl="alert('你不单单只按了鼠标左键和 Ctrl键，同时按其他键我也可以触发')">A</button>
+  <button @click.ctrl.exact="alert('你只按ctrl键+鼠标左键，才能触发我')">
+    A
+  </button>
+
+  <!-- 没有任何系统修饰符被按下的时候才触发 -->
+  <button @click.exact="alert('没有按任何系统修饰符')">A</button>
+</div>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {},
+  });
+</script>
+</body>
+</html>

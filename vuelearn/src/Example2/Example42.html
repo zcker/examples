@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>syl-vue</title>
+  <!-- 通过cdn方式引入 vue.js -->
+  <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <span>多行：</span>
+  <p style="white-space: pre-line">{{message}}</p>
+  <br>
+  <textarea v-model="message" placeholder="添加" cols="30" rows="10"></textarea>
+</div>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data() {
+      return{
+        message:""
+      }
+    },
+  });
+</script>
+</body>
+</html>

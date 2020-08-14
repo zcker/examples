@@ -1,0 +1,78 @@
+2020-07-27 16:38:57.909  INFO 11916 --- [main] com.zcker.BoardApplication               : Starting BoardApplication on DESKTOP-ZCKMI with PID 11916 (D:\ProjectX\target\classes started by mi in D:\ProjectX)
+2020-07-27 16:38:57.948  INFO 11916 --- [main] com.zcker.BoardApplication               : No active profile set, falling back to default profiles: default
+2020-07-27 16:38:59.910  INFO 11916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 16:38:59.937  INFO 11916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 16:38:59.940  INFO 11916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-07-27 16:39:00.148  INFO 11916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 16:39:00.149  INFO 11916 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2057 ms
+2020-07-27 16:39:00.550  INFO 11916 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 16:39:00.986  INFO 11916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 16:39:01.028  INFO 11916 --- [main] com.zcker.BoardApplication               : Started BoardApplication in 4.077 seconds (JVM running for 6.916)
+2020-07-27 16:39:01.586  INFO 115024 --- [main] com.zcker.BoardApplication               : Starting BoardApplication on DESKTOP-ZCKMI with PID 115024 (D:\ProjectX\target\classes started by mi in D:\ProjectX)
+2020-07-27 16:39:01.594  INFO 115024 --- [main] com.zcker.BoardApplication               : No active profile set, falling back to default profiles: default
+2020-07-27 16:39:03.185  INFO 115024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 16:39:03.196  INFO 115024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 16:39:03.197  INFO 115024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-07-27 16:39:03.299  INFO 115024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 16:39:03.299  INFO 115024 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1616 ms
+2020-07-27 16:39:03.540  INFO 115024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 16:39:03.719  WARN 115024 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-07-27 16:39:03.720  INFO 115024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-27 16:39:03.724  INFO 115024 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-07-27 16:39:03.738  INFO 115024 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-27 16:39:03.745 ERROR 115024 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-07-27 16:39:49.527  INFO 11916 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-27 18:14:47.328  INFO 4840 --- [main] com.zcker.BoardApplication               : Starting BoardApplication on DESKTOP-ZCKMI with PID 4840 (D:\ProjectX\target\classes started by mi in D:\ProjectX)
+2020-07-27 18:14:47.334  INFO 4840 --- [main] com.zcker.BoardApplication               : No active profile set, falling back to default profiles: default
+2020-07-27 18:14:48.368  INFO 4840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 18:14:48.380  INFO 4840 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 18:14:48.380  INFO 4840 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-07-27 18:14:48.489  INFO 4840 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 18:14:48.489  INFO 4840 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1079 ms
+2020-07-27 18:14:48.678  INFO 4840 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 18:14:48.861  INFO 4840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 18:14:48.873  INFO 4840 --- [main] com.zcker.BoardApplication               : Started BoardApplication in 2.351 seconds (JVM running for 4.726)
+2020-07-27 18:15:19.868  INFO 4840 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-27 18:15:19.868  INFO 4840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-27 18:15:19.876  INFO 4840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-27 18:16:06.332  INFO 34552 --- [main] com.zcker.BoardApplication               : Starting BoardApplication on DESKTOP-ZCKMI with PID 34552 (D:\ProjectX\target\classes started by mi in D:\ProjectX)
+2020-07-27 18:16:06.336  INFO 34552 --- [main] com.zcker.BoardApplication               : No active profile set, falling back to default profiles: default
+2020-07-27 18:16:07.317  INFO 34552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 18:16:07.325  INFO 34552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 18:16:07.326  INFO 34552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-07-27 18:16:07.417  INFO 34552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 18:16:07.417  INFO 34552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1028 ms
+2020-07-27 18:16:07.578  INFO 34552 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 18:16:07.759  INFO 34552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 18:16:07.770  INFO 34552 --- [main] com.zcker.BoardApplication               : Started BoardApplication in 1.942 seconds (JVM running for 3.454)
+2020-07-27 18:17:22.442  INFO 34552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-27 18:17:22.442  INFO 34552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-27 18:17:22.450  INFO 34552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-07-27 18:21:55.341  INFO 117872 --- [main] com.zcker.BoardApplication               : Starting BoardApplication on DESKTOP-ZCKMI with PID 117872 (D:\ProjectX\target\classes started by mi in D:\ProjectX)
+2020-07-27 18:21:55.345  INFO 117872 --- [main] com.zcker.BoardApplication               : No active profile set, falling back to default profiles: default
+2020-07-27 18:21:56.429  INFO 117872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 18:21:56.442  INFO 117872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 18:21:56.443  INFO 117872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-07-27 18:21:56.531  INFO 117872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 18:21:56.532  INFO 117872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1124 ms
+2020-07-27 18:21:56.693  INFO 117872 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 18:21:56.854  INFO 117872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 18:21:56.864  INFO 117872 --- [main] com.zcker.BoardApplication               : Started BoardApplication in 2.097 seconds (JVM running for 3.576)
+2020-07-27 18:22:22.363  INFO 117872 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-27 18:22:22.363  INFO 117872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-27 18:22:22.371  INFO 117872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms

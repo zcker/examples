@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>vue</title>
+    <script src="https://labfile.oss.aliyuncs.com/courses/1262/vue.min.js"></script>
+    <!-- 引入animate.css -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1"
+        rel="stylesheet"
+        type="text/css"
+    />
+</head>
+
+<body>
+<div id="app">
+    <button @click="show = !show">
+        Toggle render
+    </button>
+    <!-- 自定义过渡的类名  animate.css动画库的类名 -->
+    <transition
+        name="custom-classes-transition"
+        enter-active-class="animated tada"
+        leave-active-class="animated bounceOutRight"
+    >
+        <p v-if="show">hello</p>
+    </transition>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                show: true,
+            };
+        },
+    });
+</script>
+</body>
+</html>
