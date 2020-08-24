@@ -1,0 +1,11 @@
+//标识proto版本
+syntax = "proto3";
+
+//编译出的包名
+option java_package  = "com.shiyanlou.bean";
+//编译出的类名
+option java_outer_classname = "CalcResponseProto";
+
+message CalcResponse {
+    double result = 1;
+}

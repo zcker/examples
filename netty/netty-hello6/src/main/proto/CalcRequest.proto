@@ -1,0 +1,10 @@
+syntax="proto3";
+
+option java_package="com.shiyanlou.bean";
+option java_outer_classname="CalcRequestProto";
+
+message CalcRequest{
+    int32 num1=1;
+    int32 num2=2;
+    string symbol=3;
+}
